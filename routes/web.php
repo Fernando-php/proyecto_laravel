@@ -16,3 +16,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+/*Route::get('/{cadena}', function ($cadena) {
+
+    return view('welcome',[
+        'cadena'=>$cadena
+    ]);
+});*/
