@@ -2,6 +2,9 @@
 
 namespace Database\Seeders;
 
+use App\Models\Tema;
+use App\Models\Mensaje;
+use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -20,5 +23,9 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+        Tema::factory(10)->create();
+        User::factory(60)->create();
+        Mensaje::factory(100)->create();
+
     }
 }
