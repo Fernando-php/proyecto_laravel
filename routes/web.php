@@ -16,8 +16,10 @@ use Illuminate\Support\Facades\Mail;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
+
+//Route::view('/','home');
 
 /*Route::get('/{cadena}', function ($cadena) {
 
