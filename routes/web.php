@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Mail\ContactanosMailable;
+use Illuminate\Support\Facades\Mail;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,3 +27,16 @@ Route::get('/', function () {
         'cadena'=>$cadena
     ]);
 });*/
+
+Route::get('contactanos', function () {
+    $correo = new ContactanosMailable;
+    Mail::to('anaarenilla@hotmail.com')->send($correo);
+    return "mensaje enviado";
+});
+
+
+/*Route::get('/dashboard', function () {
+    return view('dashboard');
+
+})->middleware(['auth', 'verified'])->name('dashboard');*/
+
