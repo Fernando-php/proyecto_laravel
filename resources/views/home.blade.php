@@ -37,7 +37,7 @@
         
     </div>
     <footer>
-        <p>© 2023 Proyecto realizado por Ana Arenilla Villalva y Laura Sánchez Ayllón</p>
+        <p>© 2023 Proyecto realizado por Ana Arenilla Villalba y Laura Sánchez Ayllón</p>
     </footer>
 </body>
 </html>
