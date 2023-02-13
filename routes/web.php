@@ -3,6 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use App\Mail\ContactanosMailable;
 use Illuminate\Support\Facades\Mail;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\CategoriesController;
+use App\Http\Controllers\MessagesController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -15,18 +19,9 @@ use Illuminate\Support\Facades\Mail;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', HomeController::class);
 
-//Route::view('/','home');
-
-/*Route::get('/{cadena}', function ($cadena) {
-
-    return view('welcome',[
-        'cadena'=>$cadena
-    ]);
-});*/
+Route::get('mensajes', [MessagesController::class, 'create']);
 
 Route::get('contactanos', function () {
     $correo = new ContactanosMailable;
