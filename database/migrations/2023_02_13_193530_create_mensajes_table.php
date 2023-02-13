@@ -13,10 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('temas', function (Blueprint $table) {
+        Schema::create('mensajes', function (Blueprint $table) {
             $table->id();
             $table->string('titulo');
+            $table->longText('descripcion');
+            $table->foreignId('categoria_id')->constrained('categorias');
+            $table->foreignId('user_id')->constrained('users');
             $table->timestamps();
+
         });
     }
 
@@ -27,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('temas');
+        Schema::dropIfExists('mensajes');
     }
 };

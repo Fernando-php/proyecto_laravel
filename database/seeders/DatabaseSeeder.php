@@ -2,8 +2,9 @@
 
 namespace Database\Seeders;
 
-use App\Models\Tema;
+use App\Models\Categoria;
 use App\Models\Mensaje;
+use App\Models\Team;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -23,9 +24,10 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
-        Tema::factory(10)->create();
-        User::factory(60)->create();
-        Mensaje::factory(100)->create();
-
+        
+      Categoria::Factory(7)->create();
+      Mensaje::Factory(50)->create();
+      User::Factory(50)->create();
+      Team::Factory(25)->create();
     }
 }
