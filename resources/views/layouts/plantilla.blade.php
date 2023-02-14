@@ -19,15 +19,15 @@
                 @endforeach
             </ul>
         </nav>
-        <div>
-
+        <div id="botonesSesion">
+            <form action="" method="post">
+                <input id="botonUsuario" type="submit" value="Sign in">
+            </form>
+            <form action="" method="post">
+                <input id="botonUsuario" type="submit" value="Log in">
+            </form>
+            <!-- Cuando haya iniciado sesión debe aparecer un botón de cerrar sesión -->
         </div>
-        <form action="" method="post">
-            <input id="botonUsuario" type="submit" value="Nuevo usuario">
-        </form>
-        <form action="" method="post">
-            <input id="botonUsuario" type="submit" value="Iniciar sesión">
-        </form>
     </header>
     <div id="container">
     <!-- Los yield se ponen en el contenido que si va a variar -->

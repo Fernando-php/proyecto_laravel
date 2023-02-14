@@ -1,5 +1,5 @@
 body {
-    background-color: #FAF6F1;
+    background-color: #f0e7dc;
     font-family: Tahoma, Geneva, sans-serif;
     font-size: 14px;
     color: #757E82;
@@ -53,13 +53,13 @@ body {
 }
 
 #boton {
-    font-size: 18px;
+    font-size: 16px;
     color: white;
     background-color: #FF6961;
     cursor: pointer;
     border: 0;
     width: 180px;
-    height: 50px;
+    height: 35px;
 }
 
 #boton2 {
@@ -78,8 +78,8 @@ body {
     background-color: #FF6961;
     cursor: pointer;
     border: 0;
-    width: 120px;
-    height: 30px;
+    padding:10px 15px;
+    margin: 5px;
 }
 
 #logo{
@@ -97,15 +97,10 @@ h2{
 
 header {
     display: flex;
-    flex-direction: row;
+    background-color: #FAF6F1;
     align-items: center;
-    justify-content: center;
-}
-
-nav {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 2vh;
+    justify-content: space-evenly;
+    margin-bottom: 30px;
 }
 
 nav a{
@@ -117,7 +112,7 @@ nav a{
 nav li{
     display:inline-block;
     /*width:15%;*/
-    padding:5px 10px;
+    padding:10px 15px;
     background-color: #77DD77;
     border:1px solid  #77DD77;
     text-align:center;
@@ -127,6 +122,11 @@ nav li{
 nav li:hover{
     background-color:#fff;
     color:#3fb43f;
+}
+
+#botonesSesion{
+    display: flex;
+    justify-content: space-evenly;
 }
 
 #tituloCategoria{
