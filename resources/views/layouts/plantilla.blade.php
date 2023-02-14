@@ -14,14 +14,16 @@
         <img id="logo" src="{{ asset('img/logo.png')}}" alt="logo">
         <nav>
             <ul>
-                <li><a href="">HOME</a></li>
+                @foreach ($categorias as $categoria)
+                <li><a href="">{{$categoria->nombre}}</a></li>
+                @endforeach
             </ul>
         </nav>
     </header>
-
+    <div id="container">
     <!-- Los yield se ponen en el contenido que si va a variar -->
     @yield('content')
-
+    </div>
     <footer>
         <p>© 2023 Proyecto realizado por Ana Arenilla Villalba y Laura Sánchez Ayllón</p>
     </footer>
