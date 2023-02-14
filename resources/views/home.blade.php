@@ -12,6 +12,7 @@
                 <h4>{{$mensaje->categoria}}</h4>
                 <p>{{$mensaje->descipcion}}</p>
             @endforeach
+            {{-- Habría que paginar los mensajes --}}
         </div>
         <div id="botones">
             <form action="../../form-result.php" method="post">
