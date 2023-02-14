@@ -11,7 +11,7 @@
 </head>
 <body>
     <header>
-        <img id="logo" src="{{ asset('img/logo.png')}}" alt="logo">
+        <a href="{{route('home')}}"><img id="logo" src="{{ asset('img/logo.png')}}" alt="logo"></a>
         <nav>
             <ul>
                 @foreach ($categorias as $categoria)
