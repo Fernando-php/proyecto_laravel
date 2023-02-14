@@ -24,7 +24,7 @@ body {
 #mensajes{
     display: flex;
     width: 800px;
-    height: 700px;
+    height: auto;
     background-color: white;
     margin-right: 50px;
     flex-direction: column;
@@ -117,6 +117,27 @@ nav li{
 nav li:hover{
     background-color:#fff;
     color:#3fb43f;
+}
+
+#tituloCategoria{
+    display: flex;
+    flex-direction: row;
+    background-color: #76d176;
+    height: 40px;
+    width: 100%;
+    color: #fff;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#tituloCategoria h3{
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+#tituloCategoria h4{
+    margin-right: 20px;
+    margin-left: 20px;
 }
 
 footer{
