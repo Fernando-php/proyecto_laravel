@@ -72,6 +72,16 @@ body {
     height: 30px;
 }
 
+#botonUsuario {
+    font-size: 14px;
+    color: white;
+    background-color: #FF6961;
+    cursor: pointer;
+    border: 0;
+    width: 120px;
+    height: 30px;
+}
+
 #logo{
     width: 150px;
     height: auto;

@@ -15,10 +15,19 @@
         <nav>
             <ul>
                 @foreach ($categorias as $categoria)
-                <li><a href="">{{$categoria->nombre}}</a></li>
+                <li><a href="{{route('home',$categoria)}}">{{$categoria->nombre}}</a></li>
                 @endforeach
             </ul>
         </nav>
+        <div>
+
+        </div>
+        <form action="" method="post">
+            <input id="botonUsuario" type="submit" value="Nuevo usuario">
+        </form>
+        <form action="" method="post">
+            <input id="botonUsuario" type="submit" value="Iniciar sesión">
+        </form>
     </header>
     <div id="container">
     <!-- Los yield se ponen en el contenido que si va a variar -->

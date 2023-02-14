@@ -19,7 +19,7 @@ use App\Http\Controllers\MessagesController;
 |
 */
 
-Route::get('/', HomeController::class);
+Route::get('/{categoria?}', HomeController::class)->name('home');
 
 Route::get('mensajes', [MessagesController::class, 'create']);
 
