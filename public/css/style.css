@@ -161,7 +161,7 @@ nav li:hover{
 #tituloCategoria{
     display: flex;
     flex-direction: row;
-    background-color: #76d176;
+    background-color: #6ac76a;
     height: 40px;
     width: 100%;
     color: #fff;
@@ -185,6 +185,26 @@ nav li:hover{
     padding: 10px;
     background-color: #f0e7dc;
     justify-content: center;
+}
+
+.page-item{
+    font-size: 14px;
+    color: white;
+    background-color: #ec564e;
+    cursor: pointer;
+    border: 0;
+    padding:10px 15px;
+    margin: 5px;
+}
+
+.page-item:hover{
+    font-size: 14px;
+    color: white;
+    background-color: #ec564e;
+    cursor: pointer;
+    border: 0;
+    padding:10px 15px;
+    margin: 5px;
 }
 
 footer{
