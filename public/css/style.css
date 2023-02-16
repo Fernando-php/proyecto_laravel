@@ -5,7 +5,16 @@ body {
     color: #757E82;
 }
 
+* {
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
 #container{
+    min-height: calc(100% - 4rem);
     display: flex;
     flex-direction: column;
     height: auto;
