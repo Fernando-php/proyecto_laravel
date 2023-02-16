@@ -3,6 +3,8 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MessagesController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Mail\ContactanosMailable;
+use Illuminate\Support\Facades\Mail;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,3 +32,9 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+Route::get('contactanos', function () {
+    $correo = new ContactanosMailable;
+    Mail::to('anaarenilla@hotmail.com')->send($correo);
+    return "mensaje enviado";
+});
