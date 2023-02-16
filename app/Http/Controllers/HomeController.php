@@ -18,6 +18,6 @@ class HomeController extends Controller
 
         $categorias = Categoria::all();
 
-        return view('home', compact('categorias','mensajes'));
+        return view('welcome', compact('categorias','mensajes'));
     }
 }

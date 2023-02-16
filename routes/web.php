@@ -15,11 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/{categoria?}', HomeController::class)->name('welcome');
 
-
+Route::get('mensajes', [MessagesController::class, 'create']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
