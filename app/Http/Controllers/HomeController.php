@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Categoria;
 use App\Models\Mensaje;
+use App\Models\Users;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
