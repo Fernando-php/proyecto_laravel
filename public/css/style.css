@@ -38,11 +38,6 @@ body {
     margin-left: 50px;
 }
 
-#boton{
-    width: auto;
-    height: 20px;
-}
-
 .box{
     width: 150px;
     height: 25px;
@@ -60,6 +55,10 @@ body {
     border: 0;
     width: 180px;
     height: 35px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
 }
 
 #boton2 {
@@ -80,6 +79,10 @@ body {
     border: 0;
     padding:10px 15px;
     margin: 5px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
 }
 
 #logo{
@@ -93,6 +96,10 @@ h1{
 
 h2{
     color: #FF6961;
+}
+
+h3{
+    font-weight: bold;
 }
 
 header {
@@ -148,6 +155,12 @@ nav li:hover{
 #tituloCategoria h4{
     margin-right: 20px;
     margin-left: 20px;
+}
+
+#paginacion{
+    width: 100%;
+    padding: 10px;
+    background-color: #f0e7dc;
 }
 
 footer{
