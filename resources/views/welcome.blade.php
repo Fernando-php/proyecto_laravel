@@ -8,6 +8,7 @@
         <div id="mensajes">
             @foreach ($mensajes as $mensaje)
             <div id="tituloCategoria">
+                {{-- Botones de editar y borrar mensajes --}}
                 <h3><strong>{{$mensaje->titulo}}</strong></h3>
                 @foreach ($categorias as $categoria)
                     @if ($categoria->id == $mensaje->categoria_id)
@@ -16,7 +17,6 @@
                 @endforeach
             </div>
             <div id="contenidoMensajeYUser">
-                {{-- <img src="" alt=""> Poner avatar del usuario --}}
                 <p>{{$mensaje->descripcion}}</p>
                 @foreach ($usuarios as $usuario)
                     @if ($usuario->id == $mensaje->user_id)
