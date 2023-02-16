@@ -31,7 +31,7 @@
                 <div id="botonesSesion">
                     @auth
                         <a href="{{ url('/dashboard') }}" id="botonUsuario">Dashboard</a>
-                        <a href="{{ url('/logout') }}" id="botonUsuario">Cerrar sesión</a>
+                        <a href="{{ route('logout') }}" id="botonUsuario">Cerrar sesión</a>
                     @else
                         <a href="{{ route('login') }}" id="botonUsuario">Log in</a>
     
