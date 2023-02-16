@@ -8,17 +8,22 @@
         <div id="mensajes">
             @foreach ($mensajes as $mensaje)
             <div id="tituloCategoria">
-                <h3>{{$mensaje->titulo}}</h3>
+                <h3><strong>{{$mensaje->titulo}}</strong></h3>
                 @foreach ($categorias as $categoria)
-                {{-- <h4>{{$mensaje->categoria_id}}</h4>  ¿Cómo poner el nombre de la categoría en vez del id??? --}}
                     @if ($categoria->id == $mensaje->categoria_id)
                     <h4>{{$categoria->nombre}}</h4>
                     @endif
                 @endforeach
             </div>
+            <div id="contenidoMensajeYUser">
                 {{-- <img src="" alt=""> Poner avatar del usuario --}}
                 <p>{{$mensaje->descripcion}}</p>
-                {{-- <h4>{{$mensaje->user_id}}</h4>  ¿Cómo poner el nombre del usuario en vez del id??? --}}
+                @foreach ($usuarios as $usuario)
+                    @if ($usuario->id == $mensaje->user_id)
+                    <h4>Usuario: <strong>{{$usuario->name}}</strong></h4>
+                    @endif
+                @endforeach
+            </div>
             @endforeach
             <div id="paginacion">
                 {{-- Paginación --}}

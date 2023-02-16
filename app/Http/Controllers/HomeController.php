@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Categoria;
 use App\Models\Mensaje;
-use App\Models\Users;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -17,8 +17,9 @@ class HomeController extends Controller
             $mensajes = Mensaje::where('categoria_id',$categoria)->paginate(8);
         }
 
+        $usuarios = User::all();
         $categorias = Categoria::all();
 
-        return view('welcome', compact('categorias','mensajes'));
+        return view('welcome', compact('categorias','mensajes','usuarios'));
     }
 }
