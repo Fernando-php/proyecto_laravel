@@ -180,9 +180,11 @@ nav li:hover{
 }
 
 #paginacion{
+    display: flex;
     width: 100%;
     padding: 10px;
     background-color: #f0e7dc;
+    justify-content: center;
 }
 
 footer{
