@@ -19,8 +19,6 @@ use Illuminate\Support\Facades\Mail;
 
 Route::get('/{categoria?}', HomeController::class)->name('welcome');
 
-
-
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -38,8 +36,6 @@ Route::get('contactanos', function () {
     Mail::to('anaarenilla@hotmail.com')->send($correo);
     return "mensaje enviado";
 });
-
-
 
 //metodo index,para el listado de los mensajes
 Route::get('mensajes', [MessagesController::class, 'index'])->name('mensajes.index');

@@ -11,18 +11,22 @@
                 {{-- Botones de editar y borrar mensajes --}}
                 <h3><strong>{{$mensaje->titulo}}</strong></h3>
                 @auth
-                <div id="botonesEditarYBorrar">
-                    {{-- ¡¡Estos botones deben aparecer solo en los mensajes que haya creado el usuario que ha iniciado sesión!! --}}
-                    <form action="{{ route('mensajes.edit', $mensaje->descripcion) }}" method="get">
-                        @csrf
-                        <input id="botonEditar" type="submit" value="Editar">
-                    </form>
-                    <form action="{{ route('mensajes.destroy', $mensaje->titulo) }}" method="delete">
-                        @csrf
-                        @method('delete')
-                        <input id="botonBorrar" type="submit" value="Borrar">
-                    </form>
-                </div>
+                @foreach ($usuarios as $usuario)
+                    @if ($usuario->id == $mensaje->user_id)
+                    <div id="botonesEditarYBorrar">
+                        {{-- ¡¡Estos botones deben aparecer solo en los mensajes que haya creado el usuario que ha iniciado sesión!! --}}
+                        <form action="{{ route('mensajes.edit', $mensaje->descripcion) }}" method="get">
+                            @csrf
+                            <input id="botonEditar" type="submit" value="Editar">
+                        </form>
+                        <form action="{{ route('mensajes.destroy', $mensaje->titulo) }}" method="delete">
+                            @csrf
+                            @method('delete')
+                            <input id="botonBorrar" type="submit" value="Borrar">
+                        </form>
+                    </div>
+                    @endif
+                @endforeach
                 @endauth 
             </div>
             <div id="contenidoMensajeYUser">
