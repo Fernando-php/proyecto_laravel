@@ -40,7 +40,12 @@
                 <label>
                     Categoría:
                     <br>
-                    <input type="text" name='categoria' value="{{old('categoria')}}">
+                    <!--<input type="text" name='categoria' value="{{old('categoria')}}">-->
+                    <select name="categoria" value="{{old('categoria')}}">
+                        @foreach ($categorias as $categoria)
+                        <option>{{$categoria->nombre}}</option>
+                        @endforeach
+                    </select>
                 </label>
                 @error('categoria')
                 <br>
