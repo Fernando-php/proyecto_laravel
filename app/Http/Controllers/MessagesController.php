@@ -8,13 +8,13 @@ class MessagesController extends Controller
 {
 
 
-    public function index(){
+    /*public function index(){
 
-       $mensajes= Mensaje::paginate();
-      
-      return view('Mensajes.index',compact('mensajes'));
+        $mensajes= Mensaje::paginate();
+
+        return view('Mensajes.index',compact('mensajes'));
         //return "Aquí tendremos el listado de mensajes";
-    }
+    }*/ //Esta funcion la tenemos en el home
 
 
     public function create(){
@@ -30,8 +30,6 @@ class MessagesController extends Controller
             "descripcion"=>'required',
             "categoria"=>'required'
         ]);
-
-
 
         $mensaje=new Mensaje();
         $mensaje->titulo=$request->titulo;
@@ -50,10 +48,11 @@ class MessagesController extends Controller
     public function edit(Mensaje $mensaje){
         return view('Mensajes.edit',compact('mensaje'));
     }
+
     public function update(Request $request, Mensaje $mensaje){
 
          //Para verificar que los campos no son nulos;
-         $request->validate([
+        $request->validate([
             "titulo"=>'required',
             "descripcion"=>'required',
             "categoria"=>'required'
@@ -68,7 +67,7 @@ class MessagesController extends Controller
 
     public function destroy(Mensaje $mensaje){
         $mensaje->delete();
-        return redirect()->route('mensajes.index');
-       }
+        return redirect()->route('welcome');
+    }
 }
 
