@@ -17,7 +17,7 @@
                 <label>
                     Título:
                     <br>
-                    <input type="text" name='titulo' value="{{old('titulo')}}">
+                    <input style="width: 175px" type="text" name='titulo' value="{{old('titulo')}}">
                 </label>
                 @error('titulo')
                 <br>
@@ -29,7 +29,7 @@
                 <label>
                     Descripción:
                     <br>
-                    <textarea  name='descripcion' row="5">{{old('descripcion')}}</textarea>
+                    <textarea style="width: 175px" name='descripcion' row="5">{{old('descripcion')}}</textarea>
                 </label>
                 @error('descripcion')
                 <br>
@@ -41,7 +41,7 @@
                     Categoría:
                     <br>
                     <!--<input type="text" name='categoria' value="{{old('categoria')}}">-->
-                    <select name="categoria" value="{{old('categoria')}}">
+                    <select style="width: 180px" name="categoria" value="{{old('categoria')}}">
                         @foreach ($categorias as $categoria)
                         <option>{{$categoria->nombre}}</option>
                         @endforeach
