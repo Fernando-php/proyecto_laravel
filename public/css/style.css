@@ -1,5 +1,5 @@
 body {
-    background-color: #FAF6F1;
+    background-color: #f0e7dc;
     font-family: Tahoma, Geneva, sans-serif;
     font-size: 14px;
     color: #757E82;
@@ -32,7 +32,7 @@ html, body {
 
 #mensajes{
     display: flex;
-    width: 1000px;
+    width: 1050px;
     height: auto;
     background-color: white;
     margin-right: 50px;
@@ -126,7 +126,7 @@ h3{
 
 header {
     display: flex;
-    background-color: #f0e7dc;
+    background-color: #FAF6F1;
     align-items: center;
     justify-content: space-evenly;
     margin-bottom: 30px;

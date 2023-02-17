@@ -31,7 +31,7 @@
             @if (Route::has('login'))
                 <div id="botonesSesion">
                     @auth
-                       <!-- <a href="{{ url('/dashboard') }}" id="botonUsuario">Dashboard</a>-->
+                        <!-- <a href="{{ url('/dashboard') }}" id="botonUsuario">Dashboard</a>-->
                         <form action="{{ route('logout') }}" method="POST">
                             @csrf
                             <button id="botonUsuario">logout</button>

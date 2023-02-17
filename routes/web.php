@@ -19,8 +19,6 @@ use Illuminate\Support\Facades\Mail;
 
 Route::get('/{categoria?}', HomeController::class)->name('welcome');
 
-
-
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -40,12 +38,11 @@ Route::get('contactanos', function () {
 });
 
 
-
 //metodo index,para el listado de los mensajes
 Route::get('mensajes', [MessagesController::class, 'index'])->name('mensajes.index');
 
 // metodo create,para crear mensaje
-Route::get('mensajes/create', [MessagesController::class, 'create'])->name('mensajes.create');
+Route::post('mensajes/create', [MessagesController::class, 'create'])->name('mensajes.create');
 
 //Para enviar informacion del formulario
 Route::post('mensajes',[MessagesController::class, 'store'])->name('mensajes.store');
