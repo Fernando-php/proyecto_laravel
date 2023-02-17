@@ -36,17 +36,17 @@ class MessagesController extends Controller
         $mensaje->descripcion=$request->descripcion;
         $mensaje->categoria_id=$request->categoria_id;
         $mensaje->save();
-        return redirect()->route('Mensajes.show',$mensaje);
+        return redirect()->route('mensajes.show',$mensaje);
     }
 
 
     public function show(Mensaje $mensaje){
-        return view('Mensajes.show',compact('mensaje'));
+        return view('mensajes.show',compact('mensaje'));
         //return "Aquí editaremos un mensaje";
     }
 
     public function edit(Mensaje $mensaje){
-        return view('Mensajes.edit',compact('mensaje'));
+        return view('mensajes.edit',compact('mensaje'));
     }
 
     public function update(Request $request, Mensaje $mensaje){
@@ -61,7 +61,7 @@ class MessagesController extends Controller
         $mensaje->descripcion=$request->descripcion;
         $mensaje->categoria_id=$request->categoria_id;
         $mensaje->save();
-        return redirect()->route('Mensajes.show',$mensaje);
+        return redirect()->route('mensajes.show',$mensaje);
 
     }
 

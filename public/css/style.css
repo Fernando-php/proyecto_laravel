@@ -22,6 +22,16 @@ html, body {
     align-items: center;
 }
 
+#container2{
+    min-height: calc(100% - 14rem);
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
 #content{
     display: flex;
     height: auto;
@@ -81,6 +91,79 @@ html, body {
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
+}
+
+#botonEditar{
+    font-size: 16px;
+    color: white;
+    background-color: #77DD77;
+    cursor: pointer;
+    border: 0;
+    width: 80px;
+    height: 30px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    margin-right: 10px;
+}
+
+#botonBorrar{
+    font-size: 16px;
+    color: white;
+    background-color: #FF6961;
+    cursor: pointer;
+    border: 0;
+    width: 80px;
+    height: 30px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    margin-right: 10px;
+}
+
+#form{
+    display: flex;
+    /* align-items: center; */
+    height: 300px;
+    width: 300px;
+    background-color: white;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    justify-content: center;
+}
+
+#form form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#botonesForm{
+    display: flex;
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+    background-color: #FF6961;
+    cursor: pointer;
+    border: 0;
+    width: 180px;
+    height: 35px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+#botonesEditarYBorrar{
+    display: flex;
+    flex-direction: row;
 }
 
 #boton2 {
