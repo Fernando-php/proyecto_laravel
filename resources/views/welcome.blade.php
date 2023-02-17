@@ -18,6 +18,7 @@
                     </form>
                     <form action="{{ route('mensajes.destroy', $mensaje->titulo) }}" method="delete">
                         @csrf
+                         @method('delete')
                         <input id="botonBorrar" type="submit" value="Borrar">
                     </form>
                 </div>
