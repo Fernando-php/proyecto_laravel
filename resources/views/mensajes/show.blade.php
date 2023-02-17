@@ -7,9 +7,14 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>{{$mensaje->$titulo}}</h1>
-    <a href="{{route('mensajes.index')}}">volver a mensajes</a>
-    <a href="{{route('mensajes.edit')}}">Editar mensaje</a>
+    @if(session('status'))
+    <div class="status">
+    {{session('status')}}
+    <div>
+    @endif
+    <h1>{{$mensaje->titulo}}</h1>
+    <a href="{{route('welcome')}}">volver a mensajes</a>
+    <a href="{{route('mensajes.edit',$mensaje)}}">Editar mensaje</a>
     <p><strong>Descripcion:</strong>{{$mensaje->descripcion}}</p>
     <p>{{$mensaje->categoria_id}}</p>
 </body>

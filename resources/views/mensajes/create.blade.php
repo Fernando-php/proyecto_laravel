@@ -43,7 +43,7 @@
                     <!--<input type="text" name='categoria' value="{{old('categoria')}}">-->
                     <select style="width: 180px" name="categoria" value="{{old('categoria')}}">
                         @foreach ($categorias as $categoria)
-                        <option>{{$categoria->nombre}}</option>
+                        <option value="{{$categoria->id}}">{{$categoria->nombre}}</option>
                         @endforeach
                     </select>
                 </label>
@@ -55,6 +55,7 @@
                 <br>
                 <button id="botonesForm" type="submit" value="{{ route('mensajes.store') }}">Enviar</button><br>
                 <a id="botonesForm" href="{{ route('welcome') }}">Cancelar</a>
+                <input type="hidden" value="{{ auth()->id(); }}" name="user_id">
             </form>
         </div>
     </div>

@@ -12,11 +12,11 @@
         <div id="form">
             <form action="{{route('mensajes.update',$mensaje)}}" method="post">
                 @csrf
-                @method('put');
+                @method('put')
                 <label>
                     titulo:
                     <br>
-                    <input type="text" name='titulo' value="{{old('titulo',$descripcion)}}">
+                    <input type="text" name='titulo' value="{{old('titulo',$mensaje->titulo)}}">
                 </label>
                 @error('titulo')
                 <br>

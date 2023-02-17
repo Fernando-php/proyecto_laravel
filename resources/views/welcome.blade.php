@@ -14,11 +14,10 @@
                 @if ($id_user_sesion == $mensaje->user_id)
                     <div id="botonesEditarYBorrar">
                         {{-- ¡¡Estos botones deben aparecer solo en los mensajes que haya creado el usuario que ha iniciado sesión!! --}}
-                        <form action="{{ route('mensajes.edit', $mensaje->descripcion) }}" method="get">
-                            @csrf
+                        <form action="{{ route('mensajes.edit', $mensaje->id) }}" method="get">
                             <input id="botonEditar" type="submit" value="Editar">
                         </form>
-                        <form action="{{ route('mensajes.destroy', $mensaje->titulo) }}" method="delete">
+                        <form action="{{ route('mensajes.destroy', $mensaje->id) }}" method="post">
                             @csrf
                             @method('delete')
                             <input id="botonBorrar" type="submit" value="Borrar">

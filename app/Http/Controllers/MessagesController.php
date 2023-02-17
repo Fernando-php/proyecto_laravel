@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\Mensaje;
 use Illuminate\Http\Request;
 use App\Models\Categoria;
+use App\Models\User;
 
 class MessagesController extends Controller
 {
@@ -30,7 +31,7 @@ class MessagesController extends Controller
     }
 
     public function store(Request $request){
-
+         session()->flash('status','creado correctamente');
         //Para verificar que los campos no son nulos;
         $request->validate([
             "titulo"=>'required',
@@ -41,8 +42,10 @@ class MessagesController extends Controller
         $mensaje=new Mensaje();
         $mensaje->titulo=$request->titulo;
         $mensaje->descripcion=$request->descripcion;
-        $mensaje->categoria_id=$request->categoria_id;
+        $mensaje->categoria_id=$request->categoria;
+        $mensaje->user_id=$request->user_id;
         $mensaje->save();
+        session()->flash('notification', ['type' => 'success', 'title' => __("mensaje creado"), 'message' => __("El mensaje ha sido creado correctamente")]);
         return redirect()->route('mensajes.show',$mensaje);
     }
 
@@ -68,13 +71,15 @@ class MessagesController extends Controller
         $mensaje->descripcion=$request->descripcion;
         $mensaje->categoria_id=$request->categoria_id;
         $mensaje->save();
+        session()->flash('notification', ['type' => 'success', 'title' => __("mensaje actualizado"), 'message' => __("El mensaje ha sido actualizado correctamente")]);
         return redirect()->route('mensajes.show',$mensaje);
+        
 
     }
 
     public function destroy(Mensaje $mensaje){
         $mensaje->delete();
-        return redirect()->route('mensajes.index');
+        return redirect()->route('welcome');
     }
 }
 
