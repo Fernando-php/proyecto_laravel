@@ -45,7 +45,7 @@ Route::get('contactanos', function () {
 Route::get('mensajes', [MessagesController::class, 'index'])->name('mensajes.index');
 
 // metodo create,para crear mensaje
-Route::post('mensajes/create', [MessagesController::class, 'create'])->name('mensajes.create')->middleware('auth');
+Route::post('mensajes/create', [MessagesController::class, 'create'])->name('mensajes.create');
 
 //Para enviar informacion del formulario
 Route::post('mensajes',[MessagesController::class, 'store'])->name('mensajes.store');
@@ -54,11 +54,11 @@ Route::post('mensajes',[MessagesController::class, 'store'])->name('mensajes.sto
 Route::get('mensajes/{mensaje}', [MessagesController::class, 'show'])->name('mensajes.show');
 
 //para  mostrar formulario de actualizacion
-Route::get('mensajes/{mensaje}/edit',[MessagesController::class, 'edit'])->name('mensajes.edit')->middleware('auth');
+Route::get('mensajes/{mensaje}/edit',[MessagesController::class, 'edit'])->name('mensajes.edit');
 
 //para actualizar
 Route::put('mensajes/{mensaje}',[MessagesController::class, 'update'])->name('mensajes.update');
 
-Route::delete('mensajes/{mensaje}',[MessagesController::class,'destroy'])->name('mensajes.destroy')->middleware('auth');
+Route::delete('mensajes/{mensaje}',[MessagesController::class,'destroy'])->name('mensajes.destroy');
 
 
