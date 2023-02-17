@@ -11,7 +11,7 @@
                 {{-- Botones de editar y borrar mensajes --}}
                 <h3><strong>{{$mensaje->titulo}}</strong></h3>
                 @auth
-                @if ("id del usuario que ha iniciado sesion" == $mensaje->user_id)
+                @if ($id_user_sesion == $mensaje->user_id)
                     <div id="botonesEditarYBorrar">
                         {{-- ¡¡Estos botones deben aparecer solo en los mensajes que haya creado el usuario que ha iniciado sesión!! --}}
                         <form action="{{ route('mensajes.edit', $mensaje->descripcion) }}" method="get">

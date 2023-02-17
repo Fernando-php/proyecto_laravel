@@ -19,7 +19,8 @@ class HomeController extends Controller
 
         $usuarios = User::all();
         $categorias = Categoria::all();
+        $id_user_sesion = auth()->id();
 
-        return view('welcome', compact('categorias','mensajes','usuarios'));
+        return view('welcome', compact('categorias','mensajes','usuarios','id_user_sesion'));
     }
 }
