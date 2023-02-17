@@ -48,7 +48,7 @@
                 <br>
                 @enderror
                 <br>
-                <button id="botonesForm" type="submit">Enviar</button><br>
+                <button id="botonesForm" type="submit" value="{{ route('mensajes.store') }}">Enviar</button><br>
                 <a id="botonesForm" href="{{ route('welcome') }}">Cancelar</a>
             </form>
         </div>

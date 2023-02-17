@@ -20,7 +20,10 @@ class CategoriaFactory extends Factory
     public function definition()
     {
         return [
-            'nombre'=>$this->faker->randomElement(['vivienda','politica'.'Servicios','Economia','Belleza','Educacion','Cultura']),
+            
+            
+            //'nombre'=>$this->faker->randomElement(['vivienda','politica'.'Servicios','Economia','Belleza','Educacion','Cultura']),
         ];
+          
     }
 }
