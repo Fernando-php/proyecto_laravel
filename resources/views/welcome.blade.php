@@ -25,12 +25,12 @@
                 <p>{{$mensaje->descripcion}}</p>
                 @foreach ($categorias as $categoria)
                     @if ($categoria->id == $mensaje->categoria_id)
-                    <h4>Categoría: <strong>{{$categoria->nombre}}</strong></h4>
+                    <h4><strong>Categoría: </strong>{{$categoria->nombre}}</h4>
                     @endif
                 @endforeach
                 @foreach ($usuarios as $usuario)
                     @if ($usuario->id == $mensaje->user_id)
-                    <h4>Usuario: <strong>{{$usuario->name}}</strong></h4>
+                    <h4><strong>Usuario: </strong>{{$usuario->name}}</h4>
                     @endif
                 @endforeach
             </div>
