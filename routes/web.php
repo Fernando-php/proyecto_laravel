@@ -54,11 +54,11 @@ Route::post('mensajes',[MessagesController::class, 'store'])->name('mensajes.sto
 Route::get('mensajes/{mensaje}', [MessagesController::class, 'show'])->name('mensajes.show');
 
 //para  mostrar formulario de actualizacion
-Route::get('mensajes/{mensaje}/edit',[MessagesController::class, 'edit'])->name('mensajes.edit');
+Route::get('mensajes/{mensaje}/edit',[MessagesController::class, 'edit'])->name('mensajes.edit')->middleware('auth');
 
 //para actualizar
 Route::put('mensajes/{mensaje}',[MessagesController::class, 'update'])->name('mensajes.update');
 
-Route::delete('mensajes/{mensaje}',[MessagesController::class,'destroy'])->name('mensajes.destroy');
+Route::delete('mensajes/{mensaje}',[MessagesController::class,'destroy'])->name('mensajes.destroy')->middleware('auth');
 
 
