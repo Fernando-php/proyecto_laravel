@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Mensaje;
 use Illuminate\Http\Request;
+use App\Models\Categoria;
 
 class MessagesController extends Controller
 {
@@ -18,7 +19,8 @@ class MessagesController extends Controller
 
 
     public function create(){
-        return view('mensajes.create');
+        $categorias = Categoria::all();
+        return view('mensajes.create',compact('categorias'));
         //return "Aquí crearemos un nuevo mensaje";
     }
 
