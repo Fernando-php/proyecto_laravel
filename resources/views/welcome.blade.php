@@ -11,6 +11,7 @@
                 {{-- Botones de editar y borrar mensajes --}}
                 <h3><strong>{{$mensaje->titulo}}</strong></h3>
                 <div id="botonesEditarYBorrar">
+                    {{-- ¡¡Estos botones deben aparecer solo en los mensajes que haya creado el usuario que ha iniciado sesión!! --}}
                     <form action="{{ route('mensajes.edit', $mensaje->descripcion) }}" method="get">
                         @csrf
                         <input id="botonEditar" type="submit" value="Editar">
