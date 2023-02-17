@@ -7,6 +7,7 @@
     <title>@yield('title')</title>
     <link rel="stylesheet" href="{{ asset('css/style.css')}}" type="text/css">
     <link rel="icon" type="image/jpg" href="{{ asset('favicon.ico')}}"/>
+    <!--<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">-->
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -30,8 +31,12 @@
             @if (Route::has('login'))
                 <div id="botonesSesion">
                     @auth
-                        <a href="{{ url('/dashboard') }}" id="botonUsuario">Dashboard</a>
-                        <a href="{{ route('logout') }}" id="botonUsuario">Cerrar sesión</a>
+                       <!-- <a href="{{ url('/dashboard') }}" id="botonUsuario">Dashboard</a>-->
+                        <form action="{{ route('logout') }}" method="POST">
+                            @csrf
+                            <button id="botonUsuario">logout</button>
+                        </form>
+                
                     @else
                         <a href="{{ route('login') }}" id="botonUsuario">Log in</a>
     

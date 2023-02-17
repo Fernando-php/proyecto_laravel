@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Mail;
 
 Route::get('/{categoria?}', HomeController::class)->name('welcome');
 
-Route::get('mensajes', [MessagesController::class, 'create']);
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -38,3 +38,27 @@ Route::get('contactanos', function () {
     Mail::to('anaarenilla@hotmail.com')->send($correo);
     return "mensaje enviado";
 });
+
+
+
+//metodo index,para el listado de los mensajes
+Route::get('mensajes', [MessagesController::class, 'index'])->name('mensajes.index');
+
+// metodo create,para crear mensaje
+Route::get('mensajes/create', [MessagesController::class, 'create'])->name('mensajes.create');
+
+//Para enviar informacion del formulario
+Route::post('mensajes',[MessagesController::class, 'store'])->name('mensajes.store');
+
+//metodo show, para mostrar datos en el formulario
+Route::get('mensajes/{mensaje}', [MessagesController::class, 'show'])->name('mensajes.show');
+
+//para  mostrar formulario de actualizacion
+Route::get('mensajes/{mensaje}/edit',[MessagesController::class, 'edit'])->name('mensajes.edit');
+
+//para actualizar
+Route::put('mensajes/{mensaje}',[MessagesController::class, 'update'])->name('mensajes.update');
+
+Route::delete('mensajes/{mensaje}',[MessagesController::class,'destroy'])->name('mensajes.destroy');
+
+
