@@ -6,6 +6,7 @@ use App\Models\Categoria;
 use App\Models\Mensaje;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
