@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Editar mensaje</title>
+    <link rel="stylesheet" href="{{ asset('css/style.css')}}" type="text/css">
 </head>
 <body>
     <div id="container2">
@@ -14,7 +15,7 @@
                 @csrf
                 @method('put')
                 <label>
-                    titulo:
+                    Título:
                     <br>
                     <input type="text" name='titulo' value="{{old('titulo',$mensaje->titulo)}}">
                 </label>
@@ -25,7 +26,7 @@
                 @enderror
                 <br>
                 <label>
-                    Descripcion:
+                    Descripción:
                     <br>
                     <textarea  name='descripcion' row="5">{{old('descripcion',$mensaje->descripcion)}}</textarea>
                 </label>
@@ -36,9 +37,13 @@
                 @enderror
                 <br>
                 <label>
-                    categoria:
+                    Categoría:
                     <br>
-                    <input type="text" name='categoria' value="{{old('categoria',$mensaje->categoria_id)}}">
+                    <select style="width: 180px" name="categoria" value="{{old('categoria',$mensaje->categoria_id)}}">
+                        @foreach ($categorias as $categoria)
+                        <option value="{{$categoria->id}}">{{$categoria->nombre}}</option>
+                        @endforeach
+                    </select>
                 </label>
                 @error('categoria')
                 <br>
@@ -46,7 +51,7 @@
                 <br>
                 @enderror
                 <br>
-                <button type="submit">Editar</button>
+                <button id="botonesForm" type="submit">Editar</button><br>
                 <a id="botonesForm" href="{{ route('welcome') }}">Cancelar</a>
             </form>
         </div>

@@ -40,7 +40,6 @@
                 <label>
                     Categoría:
                     <br>
-                    <!--<input type="text" name='categoria' value="{{old('categoria')}}">-->
                     <select style="width: 180px" name="categoria" value="{{old('categoria')}}">
                         @foreach ($categorias as $categoria)
                         <option value="{{$categoria->id}}">{{$categoria->nombre}}</option>

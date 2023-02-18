@@ -4,18 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Mensaje creado</title>
+    <link rel="stylesheet" href="{{ asset('css/style.css')}}" type="text/css">
 </head>
 <body>
-    @if(session('status'))
-    <div class="status">
-    {{session('status')}}
-    <div>
-    @endif
-    <h1>{{$mensaje->titulo}}</h1>
-    <a href="{{route('welcome')}}">volver a mensajes</a>
-    <a href="{{route('mensajes.edit',$mensaje)}}">Editar mensaje</a>
-    <p><strong>Descripcion:</strong>{{$mensaje->descripcion}}</p>
-    <p>{{$mensaje->categoria_id}}</p>
+    <div id="container3">
+        <div id="content2">
+            {{--@if(session('status'))
+            <div class="status">
+            {{session('status')}}
+            <div>
+            @endif--}}
+            <h2>{{$mensaje->titulo}}</h2><br>
+            <p>{{$mensaje->descripcion}}</p><br>
+            <a id="botonesForm" href="{{route('mensajes.edit',$mensaje)}}">Editar mensaje</a><br>
+            <a id="botonesForm" href="{{route('welcome')}}">volver a mensajes</a>
+        </div>
+    </div>
 </body>
 </html>

@@ -31,7 +31,7 @@ class MessagesController extends Controller
     }
 
     public function store(Request $request){
-         session()->flash('status','creado correctamente');
+        session()->flash('status','Mensaje creado correctamente');
         //Para verificar que los campos no son nulos;
         $request->validate([
             "titulo"=>'required',
@@ -56,7 +56,8 @@ class MessagesController extends Controller
     }
 
     public function edit(Mensaje $mensaje){
-        return view('mensajes.edit',compact('mensaje'));
+        $categorias = Categoria::all();
+        return view('mensajes.edit',compact('mensaje','categorias'));
     }
 
     public function update(Request $request, Mensaje $mensaje){
