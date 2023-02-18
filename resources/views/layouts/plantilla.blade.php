@@ -31,17 +31,16 @@
             @if (Route::has('login'))
                 <div id="botonesSesion">
                     @auth
-                        <!-- <a href="{{ url('/dashboard') }}" id="botonUsuario">Dashboard</a>-->
                         <form action="{{ route('logout') }}" method="POST">
                             @csrf
-                            <button id="botonUsuario">logout</button>
+                            <button id="botonUsuario">Cerrar Sesión</button>
                         </form>
                 
                     @else
-                        <a href="{{ route('login') }}" id="botonUsuario">Log in</a>
+                        <a href="{{ route('login') }}" id="botonUsuario">Iniciar Sesión</a>
     
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}" id="botonUsuario">Register</a>
+                            <a href="{{ route('register') }}" id="botonUsuario">Registrarse</a>
                         @endif
                     @endauth
                 </div>
