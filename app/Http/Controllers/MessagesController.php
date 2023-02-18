@@ -65,12 +65,12 @@ class MessagesController extends Controller
          //Para verificar que los campos no son nulos;
         $request->validate([
             "titulo"=>'required',
-            "descripcion"=>'required',
-            "categoria"=>'required'
+            "descripcion"=>'required'
         ]);
         $mensaje->titulo=$request->titulo;
         $mensaje->descripcion=$request->descripcion;
         $mensaje->categoria_id=$request->categoria_id;
+        $mensaje->user_id=$request->user_id;
         $mensaje->save();
         session()->flash('notification', ['type' => 'success', 'title' => __("mensaje actualizado"), 'message' => __("El mensaje ha sido actualizado correctamente")]);
         return redirect()->route('mensajes.show',$mensaje);

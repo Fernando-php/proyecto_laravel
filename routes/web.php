@@ -21,6 +21,7 @@ Route::get('/{categoria?}', HomeController::class)->name('welcome');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
+    //return redirect()->route('welcome');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 /*Route::get('dashboard/{categoria?}', function () {

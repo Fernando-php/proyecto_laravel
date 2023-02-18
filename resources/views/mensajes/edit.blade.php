@@ -36,23 +36,10 @@
                 <br>
                 @enderror
                 <br>
-                <label>
-                    Categoría:
-                    <br>
-                    <select style="width: 180px" name="categoria" value="{{old('categoria',$mensaje->categoria_id)}}">
-                        @foreach ($categorias as $categoria)
-                        <option value="{{$categoria->id}}">{{$categoria->nombre}}</option>
-                        @endforeach
-                    </select>
-                </label>
-                @error('categoria')
-                <br>
-                <small>*{{$message}}</small>
-                <br>
-                @enderror
-                <br>
                 <button id="botonesForm" type="submit">Editar</button><br>
                 <a id="botonesForm" href="{{ route('welcome') }}">Cancelar</a>
+                <input type="hidden" value="{{ auth()->id(); }}" name="user_id">
+                <input type="hidden" value="{{ $mensaje->categoria_id }}" name="categoria_id">
             </form>
         </div>
     </div>
