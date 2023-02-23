@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Mail;
 */
 
 Route::get('/{categoria?}', HomeController::class)->name('welcome');
+Route::get('/{categoria?}', HomeController::class)->name('welcome');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
